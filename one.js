@@ -10,8 +10,8 @@ export default function () {
 
   check(portalPage, {
     'is status 200': (r) => r.status === 200,
-    'has cookie SAKAIID': (r) => r.cookies.SAKAIID.length > 0,
-    'cookie has correct name': (r) => r.cookies.SAKAIID[0].name === 'SAKAIID',
+    'has cookie JSESSIONID': (r) => r.cookies.JSESSIONID.length > 0,
+    'cookie has correct name': (r) => r.cookies.JSESSIONID[0].name === 'JSESSIONID',
   });
 
   const xloginPage = http.get(`${BASE_URL}/portal/xlogin`);

@@ -12,7 +12,7 @@ export default function () {
 
   check(portalPage, {
     'is status 200': (r) => r.status === 200,
-    'cookie named SAKAIID': (r) => r.cookies.SAKAIID[0].name === 'SAKAIID',
+    'cookie named JSESSIONID': (r) => r.cookies.JSESSIONID[0].name === 'JSESSIONID',
   });
 
   // 2: unauthenticated load of xlogin page
